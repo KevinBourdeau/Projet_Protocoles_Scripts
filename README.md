@@ -223,6 +223,49 @@ Permet de relancer bind9 pour appliquer les modifications.
 		</Directory>
 		</VirtualHost>
 
+-	mkdir /var/www/carnofluxe 
+Création du fichier pour le site “carnofluxe”.
+
+-	mkdir /var/www/supervision 
+Création du fichier pour le site “supervision”.
+
+-	nano /var/www/carnofluxe/index.html
+Création de la page du site “carnofluxe”.
+
+-	nano /var/www/supervision/index.html 
+Création de la page du site “supervision”.
+
+-	a2ensite 000-default.conf 
+Permet l’activation du site “000-default.conf” qui permet de mettre le chemin /var/www comme défaut pour l’ip du site 192.168.10.10.
+
+-	a2ensite carnofluxe.local.conf 
+Permet l'activation du site “www.carnofluxe.domain” et “supervision.carnofluxe.domain”. 
+
+
+# Configuration du serveur SSH :
+
+-	/etc/ssh/ssh_config :
+	*	Décommenter la ligne “Port 22”.
+	*	Décommenter la ligne “PermitRootLogin”.
+	*	Remplacer la suite de la ligne précédente par “no”.
+
+Ensuite pour que l'authentification se fasse automatiquement sans la demande de mot de passe, on doit générer une clé rsa (plus sécurisé que dsa) qui va être utilisée pour la connexion pour cela tapez la commande :
+
+				ssh-keygen 
+					
+sur la machine cliente ensuite des questions apparaîtront, appuyez sur entrée pour toutes les questions : 
+
+		Enter file in which to save the key (/home/clement/.ssh/id_rsa) :
+
+		Enter passphrase (empty for no passphrase) : Ici tapez entrez pour qu’il n’y ait pas de mot de passe à entrer lors de la connexion
+		
+		Enter same passphrase again : de même ici
+
+Ensuite on doit copier notre clé sur le serveur virtuel distant ici le serveur HTTP.
+
+		ssh-copy-id clement@192.168.10.10
+		
+Tapez yes dans le message suivant qui est un message d’avertissement et enfin un message vous demandera le mot de passe de l’utilisateur du serveur distant.
 
 
 
