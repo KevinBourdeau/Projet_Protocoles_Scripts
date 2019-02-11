@@ -8,8 +8,7 @@ Pour mettre en place cette solution il faut :
 
 Nous avons créé 3 serveurs :
 
-Nom	Type serveur	Paquets installés	ip
-dhcpDns	DNS maitre
+| Nom | Type serveur | Paquets installés | ip | dhcpDns | DNS maitre| |----------|:-------------:|------:|
 DHCP	- Bind9 (serveur dns)
 - isc-dhcp-server (serveur dhcp)
 - dnsutils (commande dig/nslookup)	192.168.10.5/24
