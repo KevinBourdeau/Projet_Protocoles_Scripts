@@ -12,7 +12,7 @@ Le but est de  fournir une solution pour aider la société Carnofluxe à adapte
 | HTTP     | git diff       | git diff      | git diff      |
 
 | Tables 	| Are 	| Cool 	|
-|----------	|:-------------:	|------:	|
-| col 1 is 	| left-aligned 	| $1600 	|
+|----------	|:------------------:	|------:	|
+| col 1 is 	| left-aligned couou 	| $1600 	|
 | col 2 is 	| centered 	| $12 	|
 | col 3 is 	| right-aligned 	| $1 	|
