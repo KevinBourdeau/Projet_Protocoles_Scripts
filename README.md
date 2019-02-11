@@ -7,12 +7,9 @@ Pour mettre en place cette solution il faut :
 ## Installation et configuration
 
 Nous avons créé 3 serveurs :
-| Nom     |   Type serveur  |                                                                               Paquets installés | IP               |
-|---------|:---------------:|------------------------------------------------------------------------------------------------:|------------------|
-| dhcpDns | DNS maitre DHCP | Bind9 (serveur dns) isc-dhcp-server (serveur dhcp) dnsutils (commande dig/nslookup)             | 192.168.10.5/24  |
-| dnSlave |    DNS slave    | Bind9  dnsutils  openssh-client (client ssh)  mailtutils (envoyer des mails)  mutt (messagerie) | 192.168.10.6/24  |
-| HTTP    |       HTTP      | apache2 (serveur http) openssh-client dnsutils curl (faire requête GET)                         | 192.168.10.10/24 |
-
+| Nom     |   Type serveur  |                                                                   Paquets installés | IP              |
+|---------|:---------------:|------------------------------------------------------------------------------------:|-----------------|
+| dhcpDns | DNS maitre DHCP | Bind9 (serveur dns) isc-dhcp-server (serveur dhcp) dnsutils (commande dig/nslookup) | 192.168.10.5/24 |
 
 
 ## Pré-requis :
