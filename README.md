@@ -7,5 +7,6 @@ Le but est de  fournir une solution pour aider la société Carnofluxe à adapte
 
 | Nom | Type serveur | Paquets | IP |
 | :---         |     :---:      |          ---: |          ---: |
-| git status   | git status     | git status    | git status    |
-| git diff     | git diff       | git diff      | git diff      |
+| dhcpDNS   | git status     | git status    | git status    |
+| DNSslave     | git diff       | git diff      | git diff      |
+| HTTP     | git diff       | git diff      | git diff      |
