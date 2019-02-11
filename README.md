@@ -45,12 +45,11 @@ Remplacer “debian” par le nom de machine et son nom de domaine
 
 
 ## Mettre en place le ‘’réseau NAT’’ sous VirtualBox :
-
-•	Vérifier que la machine est bien éteinte. 
-•	Fichier > Paramètres > Réseau > Ajouter un réseau NAT. 
-•	Modifier le réseau NAT :
-	•	Mettre l’IP réseau souhaité (ici 192.168.10.0/24).
-	•	Décocher “Supporte le DHCP”.
+-	Vérifier que la machine est bien éteinte. 
+-	Fichier > Paramètres > Réseau > Ajouter un réseau NAT. 
+-	Modifier le réseau NAT :
+	*	Mettre l’IP réseau souhaité (ici 192.168.10.0/24).
+	*	Décocher “Supporte le DHCP”.
 
 
 
