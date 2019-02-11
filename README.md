@@ -5,7 +5,7 @@ Le but est de  fournir une solution pour aider la société Carnofluxe à adapte
 
 
 
-| Nom | Type serveur | Paquets installés | IP |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
+| Nom | Type serveur | Paquets |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
