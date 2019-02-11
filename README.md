@@ -16,7 +16,7 @@ Nous avons créé 3 serveurs :
 
 # Pré-requis :
 
-Changer le nom de chaque machine :
+## Changer le nom de chaque machine :
 
 -	/etc/hostname  
 Remplacer “debian” par le nom de machine et son nom de domaine 
