@@ -27,6 +27,20 @@ Remplacer “debian” par le nom de machine et son nom de domaine
 Remplacer “debian” par le nom de machine et son nom de domaine
 (Exemple : 127.0.1.1	dhcpDns.carnofluxe.domain).
 
-Pour se faire il faut commencer par définir pour chaques machines leurs noms :
+## Installation des paquets en fonction des serveurs :
 
-				nano /etc/hosts 
+				apt-get update && apt-get upgrade
+				apt-get install Apache2
+				
+## Mettre l’adresse ip de la machine en statique : 
+-	/etc/network/interfaces
+
+ (dans address: mettre l’ip voulue)
+ 
+				allow-hotplug enp0s3
+				iface enp0s3 inet static
+				address 192.168.10.10
+				netmask 255.255.255.0
+				gateway 192.168.10.1
+
+
