@@ -27,3 +27,6 @@ Remplacer “debian” par le nom de machine et son nom de domaine
 Remplacer “debian” par le nom de machine et son nom de domaine
 (Exemple : 127.0.1.1	dhcpDns.carnofluxe.domain).
 
+Pour se faire il faut commencer par définir pour chaques machines leurs noms :
+
+				nano /etc/hosts 
