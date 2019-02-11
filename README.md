@@ -6,8 +6,8 @@ Le but est de  fournir une solution pour aider la société Carnofluxe à adapte
 
 
 | Nom | Type serveur | Paquets | IP |
-| :---         |     :---:      | :---:      |       ---: |
-| dhcpDNS   |  DNS maître / DHCP | Bind9 (serveur dns) / isc-dhcp-server (serveur dhcp) / dnsutils (commande dig/nslookup) | 192.168.10.10/24    |
-| DNSslave     | git diff       | git diff      | git diff      |
-| HTTP     | git diff       | git diff      | git diff      |
+| :---         |     :---:      |     :---:      |       ---: |
+| dhcpDns   |  DNS maître / DHCP | Bind9 (serveur dns) / isc-dhcp-server (serveur dhcp) / dnsutils (commande dig/nslookup) | 192.168.10.5/24    |
+| dnSlave     | DNS slave       | Bind9 / dnsutils / openssh-client (client ssh) / mailtutils (envoyer des mails) / mutt (créer système de messagerie)      | 192.168.10.6/24      |
+| http     | HTTP       | git diff      | git diff      |
 
