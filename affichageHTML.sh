@@ -1,13 +1,13 @@
 
 #!/bin/bash
 
-#Création des variables
+#CrÃ©ation des variables
 LOG_CSV=/home/clement/log.csv
 STATUS_CSV=/home/clement/status.csv
 ERREURS_STATUS=/home/clement/erreurs_status.log
 ERREURS_LOG=/home/clement/erreurs_log.log
 
-#Création des pages html
+#CrÃ©ation des pages html
 LOG_HTML=/var/www/supervision/log.html
 STATUS_HTML=/var/www/supervision/status.html
 
@@ -26,9 +26,9 @@ if [ -f "$LOG_CSV" ]; then
         done < $LOG_CSV
         echo "</table>" >> $LOG_HTML
 else
-        echo "Fichier log.csv introuvable." # S'il n'existe pas où il y a un problème on affiche les erreurs sur la page
+        echo "Fichier log.csv introuvable." # S'il n'existe pas oÃ¹ il y a un problÃ¨me on affiche les erreurs sur la page
         $LOG_CSV 2> $ERREURS_LOG
-        echo $RECUP_LOG > $LOG_HTML #On rediriges les erreurs du fihcier sur les 2 pages html
+        echo $RECUP_LOG > $LOG_HTML #On rediriges les erreurs du fihcier sur la page html
 fi
 
 if [ -f "$STATUS_CSV" ]; then
