@@ -25,13 +25,12 @@ md5sum $complete/www/index.html | grep -oP ".* " >> $codeCompleteWWW
 md5sum $complete/apache2/*/* | grep -oP ".* " > $codeCompleteAPA
 
 #gestion du nombre de sauvegarde
-ligne=$(wc -l $name_backup | awk '{print $1}')
+ligne=$(wc -l $name_backup | awk '{print $1}') # -l compte les lignes
 while [ "$ligne" -eq "7" ]
 do
         ligne1=$(head -n 1 $name_backup)
         rm -r /home/backup/complete/$ligne1
-        sed -i 1p $name_backup
-        ligne=$(wc -l $name_backup | awk '{print $1}')
+        sed -i 1p $name_backup # -i récupère les lignes
 done
 
 scp -r -p $complete clement@192.168.10.6:/home/clement/sauvegarde #copie de la suavegarde sur le serveur dnSlave
