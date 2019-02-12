@@ -14,7 +14,7 @@ rm $LOG_CSV
 while read line
 do
         # On récupère seulement les lignes où il y a écrit www.carnofluxe.domain et on récupère les addresse IP
-        GREP=$(echo $line | grep "www.carnofluxe.domain" | grep -oP "(25[0-5]|2[0-4]\d|[01]?[0-9]?[0-9]\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])|(\:([0-1][0-9]|[2][0-4])\:([0-5]?[0-9])\:([0-5]?[0-9]))" | sed$
+        GREP=$(echo $line | grep "www.carnofluxe.domain" | grep -oP "(25[0-5]|2[0-4]\d|[01]?[0-9]?[0-9]\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])|(\:([0-1][0-9]|[2][0-4])\:([0-5]?[0-9])\:([0-5]?[0-9]))" | sed 's/:/;/')
         HEURE=$(echo $GREP | grep -oP ";[0-2][0-9]" | sed "s/;//" )
         CURL=$(echo $line | grep -oP "curl")
         
