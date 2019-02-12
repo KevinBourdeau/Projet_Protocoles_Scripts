@@ -44,15 +44,15 @@ fi
 
 #si aucune sauvegarde
 if [[ "$sauv" == false && "$sauv1" = false ]]; then
-        echo "aucun changement depuis la précédente sauvegarde"
+        echo "aucun changement depuis la prÃ©cÃ©dente sauvegarde"
         rm -r $backup
 fi
 
-scp -r -p $backup clement@192.168.10.6:/home/clement/sauvegarde
+scp -r -p $backup clement@192.168.10.6:/home/clement/sauvegarde #Copie de la sauvegarde sur le serveur dnSlave.
 
 #Si le fichier erreur contient des lignes alors il y a eu des erreurs
-if [ -s "$erreur_sauvegardeDiff" ];then
-        echo "Echec de la sauvegarde" | mail -s "Problème de sauvegarde" clement 
+if [ -s "$erreur_sauvegardeDiff" ];then # -s vÃ©rifie si le fichier est plein
+        echo "Echec de la sauvegarde" | mail -s "ProblÃ¨me de sauvegarde" clement 
 else
-        echo "Sauvegarde réussite"
+        echo "Sauvegarde rÃ©ussite"
 fi 
