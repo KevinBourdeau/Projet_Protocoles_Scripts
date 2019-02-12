@@ -205,23 +205,13 @@ Permet de relancer bind9 pour appliquer les modifications.
 			DocumentRoot /var/www/carnofluxe
 			DirectoryIndex index.html
 
-			<Directory /var/www/carnofluxe/>
-				Require all granted
-				AllowOverride All
-				</Directory>
-				</VirtualHost>
-
 		<VirtualHost *:80>
 			ServerName supervision.carnofluxe.domain
 			ServerAlias supervision.domain
 			DocumentRoot /var/www/supervision
 			DirectoryIndex index.html
 
-			<Directory /var/www/supervision/>
-				Require all granted
-				AllowOverride All
-				</Directory>
-				</VirtualHost>
+		</VirtualHost>
 
 -	mkdir /var/www/carnofluxe 
 Création du fichier pour le site “carnofluxe”.
