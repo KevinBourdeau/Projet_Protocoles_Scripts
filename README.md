@@ -200,28 +200,28 @@ Permet de relancer bind9 pour appliquer les modifications.
 -	/etc/apache2/sites-available/carnofluxe.domain.conf
 
 		<VirtualHost *:80>
-		ServerName www.carnofluxe.domain
-		ServerAlias carnofluxe.domain
-		DocumentRoot /var/www/carnofluxe
-		DirectoryIndex index.html
+			ServerName www.carnofluxe.domain
+			ServerAlias carnofluxe.domain
+			DocumentRoot /var/www/carnofluxe
+			DirectoryIndex index.html
 
-		<Directory /var/www/carnofluxe/>
-		Require all granted
-		AllowOverride All
-		</Directory>
-		</VirtualHost>
+			<Directory /var/www/carnofluxe/>
+				Require all granted
+				AllowOverride All
+				</Directory>
+				</VirtualHost>
 
 		<VirtualHost *:80>
-		ServerName supervision.carnofluxe.domain
-		ServerAlias supervision.domain
-		DocumentRoot /var/www/supervision
-		DirectoryIndex index.html
+			ServerName supervision.carnofluxe.domain
+			ServerAlias supervision.domain
+			DocumentRoot /var/www/supervision
+			DirectoryIndex index.html
 
 			<Directory /var/www/supervision/>
-		Require all granted
-		AllowOverride All
-		</Directory>
-		</VirtualHost>
+				Require all granted
+				AllowOverride All
+				</Directory>
+				</VirtualHost>
 
 -	mkdir /var/www/carnofluxe 
 Création du fichier pour le site “carnofluxe”.
