@@ -1,13 +1,13 @@
 #!/bin/bash
 #sauvegarde complete des fichiers /var/www et /apache2
-#‡ executer tous les mois
+#√† executer tous les mois
 
 name_backup=/home/backup/complete/backupcomplete.txt
 codeCompleteWWW=/home/backup/complete/completeWWW.txt
 codeCompleteAPA=/home/backup/complete/completeAPA.txt
 erreur_sauvegarde=/home/clement/erreur_sauvegarde.txt
 
-#recuperer la date (annÈe + mois)
+#recuperer la date (ann√©e + mois)
 date=$(date +%Y-%m)
 
 #repertoire des sauvegardes completes
@@ -34,11 +34,11 @@ do
         ligne=$(wc -l $name_backup | awk '{print $1}')
 done
 
-scp -r -p $complete clement@192.168.10.6:/home/clement/sauvegarde
+scp -r -p $complete clement@192.168.10.6:/home/clement/sauvegarde #copie de la suavegarde sur le serveur dnSlave
 
 #Si le fichier erreur contient des lignes alors il y a eu des erreurs
-if [ -s "$erreur_sauvegarde" ];then
-        echo "Echec de la sauvegarde" | mail -s "ProblËme de sauvegarde" clement 
+if [ -s "$erreur_sauvegarde" ];then # -s v√©rifie si le fichier erreur est plein 
+        echo "Echec de la sauvegarde" | mail -s "Probl√®me de sauvegarde" clement 
 else
-        echo "Sauvegarde rÈussite"
+        echo "Sauvegarde r√©ussite"
 fi
