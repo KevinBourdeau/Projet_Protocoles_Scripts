@@ -18,7 +18,7 @@ do
         HEURE=$(echo $GREP | grep -oP ";[0-2][0-9]" | sed "s/;//" )
         CURL=$(echo $line | grep -oP "curl")
         
-        #Si les lignes récupérées ont la même heure que l'heure actuelle et que l'accès au site se fait qu'avec un navigateur alors on récupère l'adresse IP.
+        #Si les lignes récupérées ont la même heure que la dernière heure et que l'accès au site se fait qu'avec un navigateur alors on récupère l'adresse IP.
         
         if [[ "$HEURE_ACTU" -le "$HEURE" ]] && [[ "$CURL" != "curl" ]]; then
                 echo $GREP >> $LOG_CSV #On écrit dans le fichier log.csv
