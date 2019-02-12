@@ -119,12 +119,15 @@ Remplacer “debian” par le nom de machine et son nom de domaine
 			604800	; Refresh
 			86400		; Retry
 			2419200	; Expire
-			604800 )	; Negative Cache TTL
+			6048000 )	; Negative Cache TTL
 		;
-		@		IN	NS	dhcpDns.
-		dhcpDns.	IN	A	192.168.10.5
+		@		IN	NS	dhcpDns.carnofluxe.domain.
+		@		IN	NS	dnSlave.carnofluxe.domain.
+		dhcpDns		IN	A	192.168.10.5
+		dnSlave		IN	A	192.168.10.6
 		www		IN	A	192.168.10.10
 		supervision	IN	A	192.168.10.10
+
 
 
 
@@ -141,11 +144,12 @@ Remplacer “debian” par le nom de machine et son nom de domaine
 			86400		; Retry
 			2419200	; Expire
 			6048100 )	; Negative Cache TTL
-		; 10.168.192.in-addr.arpa	IN	NS	dhcpDns.carnofluxe.domain
-		5	IN	PTR	carnofluxe.domain
-		5	IN	PTR	dhcpDns.carnofluxe.domain
-		10	IN	PTR	www.carnofluxe.domain
-		10	IN	PTR	supervision.carnofluxe.domain
+		; 
+		@	IN	NS	dhcpDns.carnofluxe.domain.
+		@	IN	NS	dnSlave.carnofluxe.domain.
+		10	IN	PTR	www.carnofluxe.domain.
+		10	IN	PTR	supervision.carnofluxe.domain.
+
 
 
 
